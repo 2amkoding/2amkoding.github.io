@@ -1,6 +1,0 @@
-# Local development scripts - add to main .gitignore if needed
-jekyll-rebuild.sh
-.aliases
-setup-aliases.sh
-.envrc
-JEKYLL-SHORTCUTS.md
