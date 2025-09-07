@@ -5,9 +5,16 @@ description: >
   My professional resume with work experience, education, and skills.
 hide_description: true
 accent_image: /assets/img/splash@0,5x.jpg
+toc: true
 ---
 
 <!--author-->
+
+<!-- TOC - D NOT AUTO-FORMAT -->
+
+- toc
+{:toc}
+<!-- END TOC -->
 
 ## Education
 
