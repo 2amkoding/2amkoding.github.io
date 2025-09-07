@@ -1,0 +1,154 @@
+# If you have a `resume.json` file, copy it into `_data` and delete this file.
+# If you don't have a JSON Resume you can just edit this YAML file instead.
+# See also: <https://jsonresume.org/>.
+basics:
+  name: "June Lee"
+  label: "Programmer"
+  picture: "https://via.placeholder.com/240x240"
+  email: "2amkoding@gmail.com"
+  website: "https://2amkoding.github.io/"
+  summary: >
+    Software developer and lifelong learner passionate about building meaningful applications 
+    and exploring new technologies.
+  location:
+    address: ""
+    postalCode: ""
+    city: "St Louis"
+    countryCode: "US"
+    region: "Missouri"
+  profiles:
+    - network: "Github"
+      username: "2amkoding"
+      url: ""
+    - network: "LinkedIn"
+      username: "2amkoding"
+      url: ""
+work:
+  - company: "WWT"
+    position: "Response Center Engineer"
+    website: "https://wwt.com"
+    startDate: "2025/08"
+    endDate:
+    summary: >
+      Supported end-users with registeration of professional license(s) by listening and analyzing
+      technical and user-related errors. Solving problems through explaining technicalities into
+      digestable steps end-users can understand.
+    highlights:
+      - "Optimize workflow pipeline through collboration with cross-functional teams."
+      - "Manipulate and maintain data integrity using Excel and Salesforce."
+  - company: "Spectrum"
+    position: "Sales Specialist"
+    startDate: "2022/03"
+    endDate: "2025/03"
+    summary: >
+      Leveraged technical knowledge and sales skills to deliver internet, video, and 
+      mobile solutions while troubleshooting issues and guiding users through system setups.
+    highlights:
+      - "Achieved top 10% regional rank for over 2+ years by consistently meeting target goals."
+      - "Earned five '100# Satisfaction Awards' from incognito Consumer Experience Assessors."
+      - "Mentored team members to exceed regional targets through teamwork and cooperation."
+      - "Member of the Specialist II Advancment Program."
+      - "Member of Apple's Excellence Program."
+  - company: "Tzar Productions"
+    position: "Creative Directive Assitant"
+    startDate: "2018/03"
+    endDate: "2021/03"
+    summary: >
+      Organized and supported creative projects from planning to post-production, coordinating
+      team workflows and managing partnerships. Applied problem-solving, process optimization,
+      and data-driven collaboration to drive project success.
+    highlights:
+      - "Achieved top 10% regional rank for over 2+ years by consistently meeting target goals."
+      - "Supported end-to-end production and managed partnerships, applying problem-solving,
+        process optimization, and data-driven collaboration skills."
+  - company: "Lyft"
+    position: "Independant Driver"
+    startDate: "2017/01"
+    endDate: "2021/10"
+    highlights:
+      - "Maintained high-quality service for 3.7K+ clients, achieving top ratings and consistent recognition for reliability and attention to detail."
+      - "Delivered thousands of client interactions with 5.0-star satisfaction, demonstrating performance tracking, consistency, and quality assurance."
+      - "Recognized 892+ times for excellence in service and client experience, highlighting discipline, reliability, and metric-driven performance."
+  - company: "Blackstone Gaming"
+    position: "Casino Banker"
+    startDate: "2016/03"
+    endDate: "2017/11"
+    highlights:
+      - "Ensured transaction accuracy and data integrity, applying meticulous attention to detail and process-driven problem-solving."
+  - company: "Rock & Brews"
+    position: "Restaurant Support Staff"
+    startDate: "2015/05"
+    endDate: "2016/01"
+    highlights:
+      - "Managed operations and financial tasks with accuracy and integrity, demonstrating multitasking, process discipline, and problem-solving skills"
+  - company: "Bankcard Services"
+    position: "Merchant Operations / Technical Support"
+    startDate: "2014/05"
+    endDate: "2016/07"
+    highlights:
+      - "Processed and validated high-volume data with nationwide teams, ensuring integrity and meeting strict deadlines while supporting data-driven operations."
+education:
+  - institution: "LaunchCode"
+    area: "Web-Development"
+    studyType: "Certificate"
+    startDate: "2024/01"
+    endDate: "2024/09"
+    gpa: "4.0"
+    courses:
+      - "Intro to Professional Web Development in JavaScript"
+      - "Java Web Development"
+      - "Structured Query Language(SQL)"
+      - "SpringBoot"
+      - "Intro to React"
+#awards:
+# - title: "Digital Compression Pioneer Award"
+#  date: "2014-11-01"
+# awarder: "Techcrunch"
+#summary: "There is no spoon."
+#publications:
+# - name: "Video compression for 3d media"
+#  publisher: "Hooli"
+# releaseDate: "2014-10-01"
+#website: "https://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)"
+#summary: "Innovative middle-out compression algorithm that changes the way we store data."
+skills:
+  - name: "Web Development"
+    level: "Continuous"
+    keywords:
+      - "Javascript"
+      - "OOP"
+      - "MVC Architecture"
+      - "Authentication"
+      - "API"
+  - name: "Software-Development"
+    level: "In-Progress"
+    keywords:
+      - "C#"
+      - "dotnet"
+      - "LeetCode"
+  - name: "DevOps"
+    level: "In-Progress"
+    keywords:
+      - "Linux"
+      - "AWS"
+      - "Python"
+      - "Terraform"
+      - "Jenkins"
+      - "GitHub Actions"
+      - "Kubernetes"
+languages:
+  - language: "English"
+    fluency: "Native speaker"
+  - language: "Korean"
+    fluency: "Fluent"
+interests:
+  - name: "Music"
+    keywords:
+      - "Neo-Soul"
+      - "House / Techno / Afro"
+      - "HiFi"
+references:
+  - name: "Erlich Bachman"
+    reference: >
+      It is my pleasure to recommend Richard, his performance working as a consultant for Main St.
+      Company proved that he will be a valuable addition to any company.

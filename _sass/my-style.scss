@@ -1,3 +1,170 @@
+// Import Sass 2.0 compatibility overrides
+@use "sass-compat";
+
+// Catppuccin Color Scheme
+:root {
+  // Catppuccin Latte (Light Mode)
+  --ctp-text: #4c4f69;        // Primary text
+  --ctp-subtext1: #5c5f77;    // Secondary text
+  --ctp-subtext0: #6c6f85;    // Muted text
+  --ctp-overlay2: #7c7f93;    // Overlay text
+  --ctp-overlay1: #8c8fa1;    // Light overlay
+  --ctp-surface2: #acb0be;    // Surface text
+  --ctp-surface1: #bcc0cc;    // Light surface
+  --ctp-base: #eff1f5;        // Background
+  --ctp-mantle: #e6e9ef;      // Mantle
+  --ctp-crust: #dce0e8;       // Crust
+  
+  // Catppuccin Latte Accent Colors
+  --ctp-rosewater: #dc8a78;
+  --ctp-flamingo: #dd7878;
+  --ctp-pink: #ea76cb;
+  --ctp-mauve: #8839ef;
+  --ctp-red: #d20f39;
+  --ctp-maroon: #e64553;
+  --ctp-peach: #fe640b;
+  --ctp-yellow: #df8e1d;
+  --ctp-green: #40a02b;
+  --ctp-teal: #179299;
+  --ctp-sky: #04a5e5;
+  --ctp-sapphire: #209fb5;
+  --ctp-blue: #1e66f5;
+  --ctp-lavender: #7287fd;
+}
+
+// Dark mode selectors - multiple approaches to catch all cases
+body.dark-mode, .dark-mode, html.dark-mode, html[data-dark-mode="true"] {
+  // Catppuccin Mocha (Dark Mode)
+  --ctp-text: #cdd6f4;        // Primary text (Catppuccin Mocha default)
+  --ctp-subtext1: #bac2de;    // Secondary text
+  --ctp-subtext0: #a6adc8;    // Muted text
+  --ctp-overlay2: #9399b2;    // Overlay text
+  --ctp-overlay1: #7f849c;    // Light overlay
+  --ctp-surface2: #585b70;    // Surface text
+  --ctp-surface1: #45475a;    // Light surface
+  --ctp-base: #1e1e2e;        // Background
+  --ctp-mantle: #181825;      // Mantle
+  --ctp-crust: #11111b;       // Crust
+  
+  // Catppuccin Mocha Accent Colors
+  --ctp-rosewater: #f5e0dc;
+  --ctp-flamingo: #f2cdcd;
+  --ctp-pink: #f5c2e7;
+  --ctp-mauve: #cba6f7;
+  --ctp-red: #f38ba8;
+  --ctp-maroon: #eba0ac;
+  --ctp-peach: #fab387;
+  --ctp-yellow: #f9e2af;
+  --ctp-green: #a6e3a1;
+  --ctp-teal: #94e2d5;
+  --ctp-sky: #89dceb;
+  --ctp-sapphire: #74c7ec;
+  --ctp-blue: #89b4fa;
+  --ctp-lavender: #b4befe;
+}
+
+// Also catch cases where system prefers dark mode
+@media (prefers-color-scheme: dark) {
+  body:not(.light-mode) {
+    --ctp-text: #cdd6f4;        // Primary text (Catppuccin Mocha default)
+    --ctp-subtext1: #bac2de;    // Secondary text
+    --ctp-subtext0: #a6adc8;    // Muted text
+    --ctp-green: #a6e3a1;
+    --ctp-teal: #94e2d5;
+    --ctp-blue: #89b4fa;
+  }
+}
+
+// Catppuccin Font Color Classes
+.ctp-text { color: var(--ctp-text) !important; }
+.ctp-subtext1 { color: var(--ctp-subtext1) !important; }
+.ctp-subtext0 { color: var(--ctp-subtext0) !important; }
+.ctp-overlay2 { color: var(--ctp-overlay2) !important; }
+.ctp-overlay1 { color: var(--ctp-overlay1) !important; }
+
+// Catppuccin Accent Colors
+.ctp-rosewater { color: var(--ctp-rosewater) !important; }
+.ctp-flamingo { color: var(--ctp-flamingo) !important; }
+.ctp-pink { color: var(--ctp-pink) !important; }
+.ctp-mauve { color: var(--ctp-mauve) !important; }
+.ctp-red { color: var(--ctp-red) !important; }
+.ctp-maroon { color: var(--ctp-maroon) !important; }
+.ctp-peach { color: var(--ctp-peach) !important; }
+.ctp-yellow { color: var(--ctp-yellow) !important; }
+.ctp-green { color: var(--ctp-green) !important; }
+.ctp-teal { color: var(--ctp-teal) !important; }
+.ctp-sky { color: var(--ctp-sky) !important; }
+.ctp-sapphire { color: var(--ctp-sapphire) !important; }
+.ctp-blue { color: var(--ctp-blue) !important; }
+.ctp-lavender { color: var(--ctp-lavender) !important; }
+
+// Global overrides for better Catppuccin integration
+body {
+  color: var(--ctp-text);
+}
+
+// Stronger overrides for dark mode - multiple selectors to catch all cases
+body.dark-mode, html.dark-mode body, html[data-dark-mode="true"] body {
+  color: var(--ctp-text) !important;
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--ctp-text) !important;
+  }
+  
+  p, div, span {
+    color: var(--ctp-text);
+  }
+  
+  .content {
+    color: var(--ctp-text) !important;
+  }
+}
+
+// Additional media query override for system dark mode preference
+@media (prefers-color-scheme: dark) {
+  body:not(.light-mode) {
+    color: #cdd6f4 !important;
+    
+    h1, h2, h3, h4, h5, h6 {
+      color: #cdd6f4 !important;
+    }
+    
+    p, div, span {
+      color: #cdd6f4;
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--ctp-text);
+}
+
+a {
+  color: var(--ctp-green);
+  
+  &:hover {
+    color: var(--ctp-teal);
+  }
+}
+
+.sidebar {
+  .sidebar-title {
+    color: var(--ctp-text);
+  }
+  
+  .tagline {
+    color: var(--ctp-subtext1);
+  }
+  
+  .sidebar-nav-item {
+    color: var(--ctp-subtext0);
+    
+    &:hover {
+      color: var(--ctp-text);
+    }
+  }
+}
+
 .dl-table {
   a {
     @supports ((text-decoration-thickness: initial) and (text-underline-offset: initial)) {

@@ -1,0 +1,28 @@
+// Sass Dart 2.0 compatibility overrides
+// This file provides modern replacements for deprecated Sass functions
+
+@use "sass:color";
+@use "sass:math";
+
+// Override CSS custom properties with modern Sass functions
+:root {
+  // Using modern color.adjust instead of fade-out
+  --accent-color-faded: #{color.adjust(rgb(79,177,186), $alpha: -0.5)};
+  --accent-color-highlight: #{color.adjust(rgb(79,177,186), $alpha: -0.9)};
+  
+  // Using modern color.adjust instead of darken
+  --accent-color-darkened: #{color.adjust(rgb(79,177,186), $lightness: -7.5%)};
+  
+  // Using modern color channel functions instead of hue/saturation
+  --dark-mode-body-bg: hsl(
+    #{color.channel(rgb(36,39,58), "hue", $space: hsl)},
+    calc(#{color.channel(rgb(36,39,58), "saturation", $space: hsl)} / 8),
+    17.5%
+  );
+  
+  --dark-mode-border-color: hsl(
+    #{color.channel(rgb(36,39,58), "hue", $space: hsl)},
+    calc(#{color.channel(rgb(36,39,58), "saturation", $space: hsl)} / 8),
+    22.5%
+  );
+}
