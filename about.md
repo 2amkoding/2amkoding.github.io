@@ -1,8 +1,7 @@
 ---
 layout: about
 description: >
-  A boutique Jekyll theme for hackers, nerds, and academics,
-  with a focus on personal sites that are meant to impress.
+  June is a software developer and lifelong learner passionate about building meaningful applications and exploring new technologies.
 hide_description: true
 redirect_from:
   - /download/
