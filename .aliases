@@ -1,0 +1,32 @@
+# Project-specific Jekyll aliases
+# These are loaded automatically when you cd into this directory
+
+# Quick rebuild - stops Jekyll, clears cache, and restarts
+alias rebuild='./jekyll-rebuild.sh'
+
+# Quick start (without cache clear)
+alias jstart='bundle exec jekyll serve --host 0.0.0.0 --livereload'
+
+# Stop Jekyll
+alias jstop='kill $(pgrep -f jekyll) 2>/dev/null && echo "Jekyll stopped" || echo "No Jekyll running"'
+
+# Clear cache only
+alias jclear='rm -rf .jekyll-cache _site && echo "Jekyll cache cleared"'
+
+# Build only (no serve)
+alias jbuild='bundle exec jekyll build'
+
+# Production build
+alias jprod='JEKYLL_ENV=production bundle exec jekyll build'
+
+# Git shortcuts for this project
+alias gac='git add . && git commit -m'
+alias gap='git add . && git commit -m "Auto commit" && git push'
+
+echo "🎯 Jekyll project aliases loaded:"
+echo "  rebuild  - Full cache clear and restart"  
+echo "  jstart   - Quick start Jekyll server"
+echo "  jstop    - Stop Jekyll server"
+echo "  jclear   - Clear Jekyll cache"
+echo "  jbuild   - Build site only"
+echo "  jprod    - Production build"

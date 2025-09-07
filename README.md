@@ -1,9 +1,11 @@
-# Hydejack Starter Kit
+# Web-Portfolio built with Jekyll, Github Pages, and Hydejack
 
-A quicker, cleaner way to get started blogging with [Hydejack](https://hydejack.com/).
+Check out my page here: <https://2amkoding.github.io/>
 
 ## Quick Start
+
 ### Running locally
+
 1. Clone repository (git users), or [download] and unzip.
 2. Open terminal, `cd` into root directory (where `_config.yml` is located)
 3. Run `bundle install` [^1]
@@ -11,9 +13,10 @@ A quicker, cleaner way to get started blogging with [Hydejack](https://hydejack.
 5. Open <http://localhost:4000/hydejack-starter-kit/>
 
 ## What's next?
-* Open files and read the comments
-* Read the [docs](https://hydejack.com/docs/)
-* Buy the [PRO version](https://hydejack.com/download/) to get the project and resume layout, newsletter subscription box, custom forms, and more.
+
+- Open files and read the comments
+- Read the [docs](https://hydejack.com/docs/)
+- Buy the [PRO version](https://hydejack.com/download/) to get the project and resume layout, newsletter subscription box, custom forms, and more.
 
 [^1]: Requires Bundler. Install with `gem install bundler`.
 
