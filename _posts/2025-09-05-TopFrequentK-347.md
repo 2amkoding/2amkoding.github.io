@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Top Frequent K Elements
-permalink: /logs/
+categories: [logs]
 toc: true
 description: >
   Breaking down LeetCode's Top K Frequent Elements problem using HashMap and bucket sort.

@@ -1,0 +1,192 @@
+---
+layout: page
+---
+
+<!-- Custom Blog Layout with Pagination -->
+<div class="blog-posts">
+  <!-- Posts Loop -->
+  {% if page.category %}
+    {% assign posts = site.categories[page.category] %}
+  {% else %}
+    {% assign posts = site.posts %}
+  {% endif %}
+  
+  {% for post in posts limit: site.paginate %}
+    <article class="blog-post-preview">
+      <header class="post-header">
+        <h2 class="post-title">
+          <a href="{{ post.url | relative_url }}" class="post-link">{{ post.title }}</a>
+        </h2>
+        <div class="post-meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}">
+            {{ post.date | date: "%B %d, %Y" }}
+          </time>
+          {% if post.categories.size > 0 %}
+            <span class="post-categories">
+              {% for category in post.categories %}
+                <span class="post-category">{{ category }}</span>{% unless forloop.last %}, {% endunless %}
+              {% endfor %}
+            </span>
+          {% endif %}
+        </div>
+      </header>
+      
+      <div class="post-content">
+        {% if post.description %}
+          {{ post.description | markdownify }}
+        {% elsif post.excerpt %}
+          {{ post.excerpt | markdownify }}
+        {% else %}
+          {{ post.content | strip_html | truncatewords: 50 }}
+        {% endif %}
+      </div>
+      
+      <footer class="post-footer">
+        <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
+      </footer>
+    </article>
+    
+    {% unless forloop.last %}
+      <hr class="post-separator">
+    {% endunless %}
+  {% endfor %}
+
+  <!-- Pagination -->
+  {% if site.paginate and site.posts.size > site.paginate %}
+    <nav class="pagination" role="navigation">
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | relative_url }}" class="pagination-item newer">← Newer Posts</a>
+      {% else %}
+        <span class="pagination-item newer disabled">← Newer Posts</span>
+      {% endif %}
+      
+      <span class="pagination-info">
+        Page {{ paginator.page | default: 1 }} of {{ paginator.total_pages | default: 1 }}
+      </span>
+      
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | relative_url }}" class="pagination-item older">Older Posts →</a>
+      {% else %}
+        <span class="pagination-item older disabled">Older Posts →</span>
+      {% endif %}
+    </nav>
+  {% endif %}
+</div>
+
+<!-- Custom Styles -->
+<style>
+.blog-posts {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.blog-post-preview {
+  margin-bottom: 2rem;
+}
+
+.post-header {
+  margin-bottom: 0.5rem;
+}
+
+.post-title {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.post-link {
+  text-decoration: none;
+  color: var(--accent-color, #007acc);
+}
+
+.post-link:hover {
+  text-decoration: underline;
+}
+
+.post-meta {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 0.75rem;
+}
+
+.post-categories {
+  margin-left: 0.5rem;
+}
+
+.post-category {
+  background: #f0f0f0;
+  padding: 0.125rem 0.375rem;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.post-content {
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.post-footer {
+  margin-top: 0.75rem;
+}
+
+.read-more {
+  font-weight: 500;
+  color: var(--accent-color, #007acc);
+  text-decoration: none;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+.post-separator {
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  margin: 2rem 0;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e5e5e5;
+}
+
+.pagination-item {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--accent-color, #007acc);
+}
+
+.pagination-item:hover:not(.disabled) {
+  background-color: #f8f9fa;
+  text-decoration: none;
+}
+
+.pagination-item.disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination-info {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .pagination {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .pagination-info {
+    order: -1;
+  }
+}
+</style>
