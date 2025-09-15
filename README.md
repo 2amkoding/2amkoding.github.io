@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-# Web-Portfolio built with Jekyll, Github Actions, Github Pages, HydeJack
-=======
 # June Lee's Web Portfolio 🌟
->>>>>>> f037a2d (update README.md)
 
 A modern, responsive web portfolio showcasing my development journey and projects, built independently with Jekyll and deployed on GitHub Pages.
 
-<<<<<<< HEAD
-=======
 ## 🎯 Project Overview
 
 This is my **second web portfolio** - a significant step up from my first attempt. While my initial portfolio was built following a YouTube tutorial, I challenged myself to create this one **more independently**, relying on documentation, problem-solving, and hands-on experimentation to build a more sophisticated and personalized showcase.
@@ -153,4 +147,3 @@ jstop
 ---
 
 *Built with ❤️ by June Lee | Powered by Jekyll & GitHub Pages*
->>>>>>> f037a2d (update README.md)
